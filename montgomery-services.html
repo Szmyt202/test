@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montgomery Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Arial', sans-serif;
+        }
+        .grain-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background-image: 
+                linear-gradient(
+                    rgba(18, 18, 18, 0.3) 0%, 
+                    rgba(18, 18, 18, 0.3) 100%
+                ),
+                url('data:image/svg+xml,%3Csvg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%" height="100%" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
+            opacity: 0.08;
+            z-index: 1;
+        }
+        .service-card {
+            background-color: rgba(30, 30, 30, 0.7);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+        .service-card:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-center items-center relative overflow-hidden">
+    <div class="grain-overlay"></div>
+    
+    <div class="text-center z-10">
+        <h1 class="text-6xl font-bold mb-12 tracking-wide text-gray-200 drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]">
+            Montgomery Services
+        </h1>
+        
+        <div class="flex justify-center space-x-8 mb-16">
+            <div class="service-card p-8 rounded-lg shadow-xl w-64 text-center">
+                <h2 class="text-2xl font-semibold mb-4 text-gray-100">Black Hat Marketing</h2>
+                <p class="text-gray-400">Disruptive strategies that push boundaries.</p>
+            </div>
+            
+            <div class="service-card p-8 rounded-lg shadow-xl w-64 text-center">
+                <h2 class="text-2xl font-semibold mb-4 text-gray-100">Video Production</h2>
+                <p class="text-gray-400">Cinematic narratives that captivate.</p>
+            </div>
+            
+            <div class="service-card p-8 rounded-lg shadow-xl w-64 text-center">
+                <h2 class="text-2xl font-semibold mb-4 text-gray-100">Web Apps Development</h2>
+                <p class="text-gray-400">Cutting-edge digital solutions.</p>
+            </div>
+        </div>
+        
+        <div class="contact-section">
+            <a href="mailto:montgomery@marketing.io" class="text-xl text-gray-300 hover:text-white transition-colors">
+                montgomery@marketing.io
+            </a>
+        </div>
+    </div>
+</body>
+</html>
